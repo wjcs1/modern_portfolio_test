@@ -68,7 +68,7 @@
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url("../img/SungJinwoo_purple.jpg");
+  background: url("../img/SungJinwoo_purple_small.jpg");
   border-radius: 50%;
   border: solid 3px #BF00FF;
 }
@@ -113,43 +113,6 @@
   transition-delay: 0.4s;
 }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center;
-  }
-  .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  ul.menu-nav, div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-  }
-  ul.menu-nav.show, div.menu-branding.show {
-    transform: translate3d(0, 0, 0);
-  }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-  }
-  .menu-branding .portrait {
-    background: url("../img/SungJinwoo_purple_small.jpg");
-    width: 150px;
-    height: 150px;
-  }
-}
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh;
-  }
-}
 * {
   box-sizing: border-box;
 }
@@ -186,7 +149,7 @@ h1.lg-heading, h2.lg-heading, h3.lg-heading {
   font-size: 6rem;
 }
 h1.sm-heading, h2.sm-heading, h3.sm-heading {
-  margin-bottom: 0;
+  margin-bottom: 20px;
   padding: 0.2rem 1rem;
   background: rgba(73.1, 73.1, 73.1, 0.5);
 }
@@ -209,6 +172,7 @@ header {
 main {
   padding: 4rem;
   height: 100%;
+  min-height: calc(100vh - 60px);
 }
 main .icons {
   margin-top: 1rem;
@@ -225,6 +189,87 @@ main#home {
 }
 main#home h1 {
   margin-top: 20vh;
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+}
+.about-info .bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: #BF00FF 3px solid;
+}
+.about-info .bio {
+  grid-area: bio;
+  font-size: 1.2rem;
+}
+.about-info .job-1 {
+  grid-area: job1;
+}
+.about-info .job-2 {
+  grid-area: job2;
+}
+.about-info .job-3 {
+  grid-area: job3;
+}
+.about-info .job {
+  background: rgb(80.75, 80.75, 80.75);
+  padding: 0.5rem;
+  border-bottom: #BF00FF 5px solid;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgb(42.5, 42.5, 42.5);
+  color: #fff;
+  height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  ul.menu-nav.show, div.menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+  }
+  .menu-branding .portrait {
+    background: url("../img/SungJinwoo_purple_small.jpg");
+    width: 150px;
+    height: 150px;
+  }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
