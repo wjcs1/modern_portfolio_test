@@ -2,4 +2,4 @@
 
 Test profile for Sung Jin Woo of Solo Leveling
 
-Credit to Pinterest
+Credit to Pinterest for epic photo
